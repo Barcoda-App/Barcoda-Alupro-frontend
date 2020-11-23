@@ -1,0 +1,21 @@
+
+<body>
+    
+       <script>
+
+           const {ipcRenderer} = require('electron')
+           ipcRenderer.on("printPDF", (event, content) => {
+               document.body.innerHTML = content;
+                 ipcRenderer.send("readyToPrintPDF");
+           });
+       </script>
+       <style>
+             @media print {
+              @page {
+              size: 100mm 50mm;
+              margin: 0;
+              padding: 0px;
+            }
+          }
+       </style>
+</body>

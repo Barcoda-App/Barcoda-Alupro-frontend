@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Segment7Standard';
+  src: url('./Barcoda_weight_font.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Seven Segment';
+  src: url('./Barcoda_weight_font.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  src: url('./Barcoda_font.ttf');
+}

@@ -1,0 +1,75 @@
+{
+  "name": "BARCODA",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:generate-icons": "electron-icon-builder --input=./public/bar.png --output=build --flatten",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps",
+    "rebuild": "electron-rebuild -f -w serialport",
+    "dist-all": "electron-builder -mw"
+  },
+  "main": "background.js",
+  "dependencies": {
+    "@serialport/bindings": "^9.0.1",
+    "axios": "^0.20.0",
+    "bootsdrac": "^1.0.1",
+    "bootstrap": "^4.5.2",
+    "bootstrap-vue": "^2.17.1",
+    "browser-serialport": "^2.1.0",
+    "chrome-serialport": "^0.1.2",
+    "core-js": "^3.6.5",
+    "electron-ipc-stream": "^0.2.0",
+    "electron-print": "^1.0.2",
+    "jsbarcode": "^3.11.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "postcss-rtl": "^1.7.3",
+    "serialport": "^9.0.1",
+    "vue": "^2.6.12",
+    "vue-barcode": "^1.2.0",
+    "vue-router": "^3.4.3",
+    "vue-typeahead-bootstrap": "^2.5.3-beta"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.0",
+    "@vue/cli-plugin-eslint": "^4.5.0",
+    "@vue/cli-service": "^4.5.0",
+    "babel-eslint": "^10.1.0",
+    "electron": "^9.0.0",
+    "electron-devtools-installer": "^3.1.0",
+    "electron-packager": "^15.1.0",
+    "electron-rebuild": "^2.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-cli-plugin-electron-builder": "^2.0.0-rc.4",
+    "vue-ipc-decorator": "^0.1.4",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "no-mixed-spaces-and-tabs": 0
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
